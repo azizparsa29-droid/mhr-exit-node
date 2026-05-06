@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: mhr-exit-node
+    runtime: image
+    repo: https://github.com/YOUR_USERNAME/mhr-exit-node
+    plan: free
+    envVars:
+      - key: EXIT_NODE_PSK
+        sync: false
+    buildCommand: npm install
+    startCommand: npm start
